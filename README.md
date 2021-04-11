@@ -1,8 +1,10 @@
 # BitrixClassHotModifier
 
 Утилитный класс, который позволяет подменять классы битрикс, загружаемые через class loader на их модифицированных наследников.
+Работает на основе spl_autoload_register и php_user_filter
 
-Использовать можно так:
+# Пример использования
+
 1.  Скопировать в дирректорию /local/classmodifier
 2.  Добавить local/classmodifier/init.php в local/php_interface/init.php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/local/classmodifier/init.php';
@@ -38,3 +40,4 @@ ClassHotModifier::setClassesExt(
 		], 'modules/crm/classes/general/restservice.php');
     
     
+ 
